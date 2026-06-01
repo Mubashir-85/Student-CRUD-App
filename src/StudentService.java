@@ -16,4 +16,15 @@ public class StudentService {
             );
         }
     }
+    public void updateStudent(int id,int age , String name){
+        for(Student student: students){
+            if(student.getId()== id){
+                student.setName(name);
+                student.setAge(age);
+                System.out.println("Student Updated");
+                return;
+            }
+        }
+        System.out.println("Student not found");
+    }
 }
