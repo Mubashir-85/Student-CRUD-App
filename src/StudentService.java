@@ -16,4 +16,12 @@ public class StudentService {
             );
         }
     }
+    public void updateStudent(int id, int age, String name){
+        for(Student student: students){
+            if(student.getId()== id){
+                student.setAge(age);
+                student.setName(name);
+            }
+        }
+    }
 }

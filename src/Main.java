@@ -7,6 +7,7 @@ public class Main {
         Student s2 = new Student(20,2,"Ahmed");
         service.addStudent(s1);
         service.addStudent(s2);
+        service.updateStudent(2,20,"Nida");
         service.viewStudent();
 
     }
