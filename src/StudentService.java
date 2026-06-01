@@ -24,4 +24,15 @@ public class StudentService {
             }
         }
     }
+    public void deleteStudent(int id){
+        for(Student student: students){
+            if(student.getId()==id) {
+                students.remove(student);
+                System.out.println("Deleted Successfully");
+                return;
+            }
+        }
+        System.out.println("Student not found");
+    }
+
 }
