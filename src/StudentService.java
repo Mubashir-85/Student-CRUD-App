@@ -16,7 +16,7 @@ public class StudentService {
             );
         }
     }
-    public void updateStudent(int id, int age, String name){
+    public void updateStudent(int id,  String name,int age){
         for(Student student: students){
             if(student.getId()== id){
                 student.setAge(age);
