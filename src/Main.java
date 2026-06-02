@@ -7,7 +7,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         StudentService service = new StudentService();
 
-        while(true){
+        while (true) {
+            System.out.println("\n===== Student Management System =====");
             System.out.println("1. Add Student");
             System.out.println("2. View ");
             System.out.println("3. Update");
@@ -16,7 +17,7 @@ public class Main {
 
             int choice = sc.nextInt();
 
-            switch (choice){
+            switch (choice) {
                 case 1:
                     System.out.println("Enter ID:");
                     int id = sc.nextInt();
@@ -29,7 +30,7 @@ public class Main {
                     System.out.println("Enter Age");
                     int age = sc.nextInt();
 
-                    service.addStudent(new Student(id,name,age));
+                    service.addStudent(new Student(id, name, age));
                     break;
 
                 case 2:
@@ -47,7 +48,7 @@ public class Main {
 
                     System.out.println("Enter new Age");
                     int updatedAge = sc.nextInt();
-                    service.updateStudent(updateId,updatedName,updatedAge);
+                    service.updateStudent(updateId, updatedName, updatedAge);
                     break;
                 case 4:
                     System.out.println("Enter Id");
