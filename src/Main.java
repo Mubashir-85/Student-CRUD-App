@@ -56,6 +56,7 @@ public class Main {
                     service.deleteStudent(deletedId);
                     break;
                 case 5:
+                    System.out.println("Thank you for using Student Management System");
                     System.exit(0);
 
                 default:
