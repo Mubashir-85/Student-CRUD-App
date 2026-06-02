@@ -35,4 +35,17 @@ public class StudentService {
         System.out.println("Student not found");
     }
 
+    public void searchStudent(int id){
+        for(Student student: students){
+            if(student.getId()==id){
+                System.out.println("ID: " + student.getId());
+                System.out.println("Name: " + student.getName());
+                System.out.println("Age: " + student.getAge());
+                return;
+
+            }
+        }
+        System.out.println("Student Not found");
+    }
+
 }
