@@ -18,6 +18,14 @@ public class StudentService {
             );
         }
     }
+    public boolean Studentexist(int id){
+        for(Student student: students){
+            if(student.getId() == id){
+                return true;
+            }
+        }
+        return false;
+    }
     public void updateStudent(int id,  String name,int age)throws InterruptedException{
         for(Student student: students){
             if(student.getId()== id){

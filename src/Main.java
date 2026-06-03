@@ -43,6 +43,10 @@ public class Main {
                     int updateId = sc.nextInt();
 
                     sc.nextLine();
+                    if(!service.Studentexist(updateId)){
+                        System.out.println("Student Not Found!!");
+                        break;
+                    }
 
                     System.out.println("Enter New Name");
                     String updatedName = sc.nextLine();
@@ -54,12 +58,22 @@ public class Main {
                 case 4:
                     System.out.println("Enter ID:");
                     int deletedId = sc.nextInt();
+                    sc.nextLine();
+                    if(!service.Studentexist(deletedId)){
+                        System.out.println("Student Not Found!!");
+                        break;
+                    }
                     service.deleteStudent(deletedId);
                     break;
 
                 case 5:
                     System.out.println("Enter ID:");
                     int searchId = sc.nextInt();
+                    sc.nextLine();
+                    if(!service.Studentexist(searchId)){
+                        System.out.println("Student Not Found!!");
+                        break;
+                    }
                     service.searchStudent(searchId);
                     break;
 
